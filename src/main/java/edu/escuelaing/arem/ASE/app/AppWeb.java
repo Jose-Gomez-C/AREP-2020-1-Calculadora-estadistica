@@ -3,6 +3,8 @@ package edu.escuelaing.arem.ASE.app;
 import static spark.Spark.get;
 import static spark.Spark.port;
 import static spark.Spark.post;
+import static spark.Spark.staticFiles;
+
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -12,13 +14,13 @@ public class AppWeb {
 
 	public static void main(String[] args) {
 		port(getPort());
-		
-		//get("/hello", (req, res) -> "perra");
-		get("calculadora", (req, res) -> {
-			String result = req.queryParams("data");
-			String page = FileUtils.readFileToString(new File("src/main/java/edu/escuelaing/arem/ASE/app/resources/index.HTML"), StandardCharsets.UTF_8);
-			System.out.println(result);
-			return page;
+		staticFiles.location("/public");
+		post("/calculadora", (request, response) -> {
+			
+			Calculadora c = new Calculadora();
+			c.leerJson(request.body());
+			
+			return "{\"media\":" + c.mean() + ", \"desviacion\":" + c.stddev() + "}";
 		});
 		
 	}

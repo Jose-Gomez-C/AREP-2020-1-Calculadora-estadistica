@@ -2,7 +2,7 @@ package edu.escuelaing.arem.ASE.app;
 import java.io.BufferedReader;
 import java.io.FileReader;
 /**
- * Clase encarga de hacer los cálculos y crear la lista.
+ * Clase encarga de hacer los cï¿½lculos y crear la lista.
  *@author Jose Luis Gomez Camacho
  */
 public class Calculadora 
@@ -32,14 +32,14 @@ public class Calculadora
 		}
 	}
 	/**
-	 * Método encargado de agregar un dato a la lista.
+	 * Mï¿½todo encargado de agregar un dato a la lista.
 	 * @param dato Numero que se quiere almacenar en la lista.
 	 */
 	public void addNumber(double dato) {
 		datos.add(dato);
 	}
 	/**
-	 * Método encargado de calcular el promedio de la lista creada.
+	 * Mï¿½todo encargado de calcular el promedio de la lista creada.
 	 * @return El promedio calculado.
 	 * @throws ListaException
 	 */
@@ -53,8 +53,8 @@ public class Calculadora
 		return resultado;
 	}
 	/**
-	 * Método encargado de calcular la desviación estándar de los elementos de la lista.
-	 * @return La desviación estándar. 
+	 * Mï¿½todo encargado de calcular la desviaciï¿½n estï¿½ndar de los elementos de la lista.
+	 * @return La desviaciï¿½n estï¿½ndar. 
 	 * @throws ListaException
 	 */
 	public double stddev() throws ListaException {
@@ -68,7 +68,7 @@ public class Calculadora
 		return resultado;
 	}
 	/**
-	 * Método encargado de aproximar a dos cifras.
+	 * Mï¿½todo encargado de aproximar a dos cifras.
 	 * @param d Valor a aproximar.
 	 * @param digitos Numero de decimales que desea aproximar.
 	 * @return El valor aproximado. 
@@ -79,6 +79,16 @@ public class Calculadora
 		resultado = Math.round(resultado);
 		resultado= resultado/Math.pow(10, digitos);
 		return (double) resultado;	
+	}
+	
+	public Lista leerJson(String json) {
+		datos = new Lista();
+		String[] jsonList = json.replace("\"", "").replace("]", "").replace("[", "").split(",");
+		for (int i = 0; i < jsonList.length; i++) {
+			double value = Double.parseDouble(jsonList[i]);
+			datos.add(value);
+		}
+		return datos;
 	}
 	
 }
