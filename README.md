@@ -26,7 +26,7 @@ Para ejecuta la aplicación:
 $ mvn exec:java -Dexec.mainClass="edu.escuelaing.arem.ASE.app.AppWeb"
 ```
 # Ejecutando pruebas
-Para ejecutar las pruebas automatizadas utilizaremos el siguiente comando
+Para ejecutar las pruebas automatizadas utilizaremos el siguiente comando.
 ```sh
 $ mvn test 
 ```
