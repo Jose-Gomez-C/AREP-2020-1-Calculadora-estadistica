@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* edu.escuelaing.AREP-Calculadora-estadistica.AppWeb
+web: java $JAVA_OPTS -cp target/classes:target/dependency/* edu.escuelaing.arem.ASE.app.AppWeb
