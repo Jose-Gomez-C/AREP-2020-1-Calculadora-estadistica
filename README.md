@@ -25,7 +25,7 @@ Para ejecuta la aplicación:
 ```sh
 $ mvn exec:java -Dexec.mainClass="edu.escuelaing.arem.ASE.app.AppWeb"
 ```
-[Aplicación](https://morning-chamber-39299.herokuapp.com/ en funcionamiento
+[Aplicación](https://morning-chamber-39299.herokuapp.com/) en funcionamiento
 # Ejecutando pruebas
 Para ejecutar las pruebas automatizadas utilizaremos el siguiente comando.
 ```sh
