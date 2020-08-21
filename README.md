@@ -21,13 +21,23 @@ Ahora compilaremos y empaquetaremos con el siguiente comando
 ```sh
 $ mvn package 
 ```
+Para ejecuta la aplicación:
+```sh
+$ mvn exec:java -Dexec.mainClass="edu.escuelaing.arem.ASE.app.AppWeb"
+```
 # Ejecutando pruebas
 Para ejecutar las pruebas automatizadas utilizaremos el siguiente comando
 ```sh
 $ mvn test 
 ```
+# Generar Javadoc
+
+```sh
+$ mvn javadoc:javadoc 
+```
 # Construido con
-  -Maven - Dependency Management
+  - [Maven](https://maven.apache.org/) - Dependency Management
+  - [SPARK](http://sparkjava.com/) Framework para desarrollar aplicaciones web
  
 # Autores
   - José Luis Gómez Camacho - Estudiante de la Escuela Colombiana De Ingeniería Julio Garavito
