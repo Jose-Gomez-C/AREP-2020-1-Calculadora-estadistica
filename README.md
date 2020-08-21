@@ -26,7 +26,7 @@ Para ejecuta la aplicación:
 $ mvn exec:java -Dexec.mainClass="edu.escuelaing.arem.ASE.app.AppWeb"
 ```
 # Ejecutando pruebas
-Para ejecutar las pruebas automatizadas utilizaremos el siguiente comando
+Para ejecutar las pruebas automatizadas utilizaremos el siguiente comando.
 ```sh
 $ mvn test 
 ```
@@ -35,6 +35,8 @@ $ mvn test
 ```sh
 $ mvn javadoc:javadoc 
 ```
+# Integracion Continua
+[![CircleCI](https://circleci.com/gh/jose-gome/AREP-2020-1-Calculadora-estadistica.svg?style=svg)](https://circleci.com/gh/jose-gome/AREP-2020-1-Calculadora-estadistica)
 # Construido con
   - [Maven](https://maven.apache.org/) - Dependency Management
   - [SPARK](http://sparkjava.com/) Framework para desarrollar aplicaciones web
